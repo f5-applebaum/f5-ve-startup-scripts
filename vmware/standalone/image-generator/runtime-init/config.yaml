@@ -15,3 +15,7 @@ UPDATE_IMAGE_FILES:
        mode: "0755"
     -  source: "/home/ubuntu/custom/startup"
        destination: "/config/startup"
+
+
+# > Release 1.9
+OVA_PROP_NET_USER: "1"
