@@ -16,7 +16,7 @@ exec 1>&-
 exec 1>$npipe
 exec 2>&1
 
-echo "$(date) - Start"
+echo "$(date +"%Y-%m-%dT%H:%M:%S.%3NZ") : Starting Custom Script"
 
 ### write_files:
 # Download or Render BIG-IP Runtime Init Config
@@ -55,4 +55,4 @@ bash /var/config/rest/downloads/f5-bigip-runtime-init-1.1.0-1.gz.run -- '--skip-
 # Run
 f5-bigip-runtime-init --config-file /config/cloud/runtime-init-conf.yaml
 
-echo "$(date) - Finished"
+echo "$(date +"%Y-%m-%dT%H:%M:%S.%3NZ") : Finished Custom Script"

@@ -15,6 +15,7 @@ exec 1>&-
 exec 1>$npipe
 exec 2>&1
 
+echo "$(date +"%Y-%m-%dT%H:%M:%S.%3NZ") : Starting Custom Script"
 ### write_files:
 # Download or Render BIG-IP Runtime Init Config 
 cat << 'EOF' > /config/cloud/runtime-init-conf.yaml
@@ -43,7 +44,7 @@ EOF
 # Download
 PACKAGE_URL='https://cdn.f5.com/product/cloudsolutions/f5-bigip-runtime-init/v1.0.0/dist/f5-bigip-runtime-init-1.0.0-1.gz.run'
 for i in {1..30}; do
-    curl -v --retry 1 --connect-timeout 5 --fail -L "${PACKAGE_URL}" -o "/var/config/rest/downloads/${PACKAGE_URL##*/}" && break || sleep 10
+    curl -fv --retry 1 --connect-timeout 5 -L "${PACKAGE_URL}" -o "/var/config/rest/downloads/${PACKAGE_URL##*/}" && break || sleep 10
 done
 # Install
 bash /var/config/rest/downloads/f5-bigip-runtime-init-1.0.0-1.gz.run -- '--cloud azure'
