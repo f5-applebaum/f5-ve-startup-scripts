@@ -1,0 +1,17 @@
+---
+# Sample F5 VE Image Generator config file
+
+UPDATE_IMAGE_FILES:
+    -  source: "/home/ubuntu/custom/f5-bigip-runtime-init-1.1.0-1.gz.run"
+       destination: "/var/config/rest/downloads/f5-bigip-runtime-init-1.1.0-1.gz.run"
+    -  source: "/home/ubuntu/custom/f5-declarative-onboarding-1.16.0-8.noarch.rpm"
+       destination: "/var/config/rest/downloads/f5-declarative-onboarding-1.16.0-8.noarch.rpm"
+    -  source: "/home/ubuntu/custom/f5-appsvcs-3.23.0-5.noarch.rpm"
+       destination: "/var/config/rest/downloads/f5-appsvcs-3.23.0-5.noarch.rpm"
+    -  source: "/home/ubuntu/custom/f5-telemetry-1.15.0-4.noarch.rpm"
+       destination: "/var/config/rest/downloads/f5-telemetry-1.15.0-4.noarch.rpm"
+    -  source: "/home/ubuntu/custom/startup-script.sh"
+       destination: "/config/cloud/startup-script.sh"
+       mode: "0755"
+    -  source: "/home/ubuntu/custom/startup"
+       destination: "/config/startup"

@@ -1,0 +1,14 @@
+#
+# NOTE: 
+# This file will be installed in /config/startup and it will 
+# be called by /etc/rc.local. 
+#
+# - /config/startup is for customer config additions and 
+#   will be saved in UCS
+#
+# - /etc/rc.local should *not* be used by customers and 
+#   can/will be changed by F5 
+#
+# from https://support.f5.com/csp/article/K11948
+
+/config/cloud/startup-script.sh &
