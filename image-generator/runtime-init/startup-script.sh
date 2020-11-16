@@ -1,6 +1,5 @@
 #!/bin/bash -x
 
-echo "$(date +"%Y-%m-%dT%H:%M:%S.%3NZ") : Starting Custom Script"
 # Wait for disk re-sizing to finisih before starting
 # ve.dir.resize: Successfully wrote the new partition table
 for i in {1..60}; do [[ -f "/var/log/ve.dir.resize.log.bak" ]] && grep -q boot_marker /var/log/ve.dir.resize.log.bak && break || sleep 1; done
