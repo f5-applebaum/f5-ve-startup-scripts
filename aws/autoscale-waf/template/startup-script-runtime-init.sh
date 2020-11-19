@@ -19,7 +19,7 @@ echo "$(date +"%Y-%m-%dT%H:%M:%S.%3NZ") : Starting Custom Script"
 ! grep -q 'provision asm' /config/bigip_base.conf && echo 'sys provision asm { level nominal }' >> /config/bigip_base.conf
 
 # VARS FROM TEMPLATE
-PACKAGE_URL='https://cdn.f5.com/product/cloudsolutions/f5-bigip-runtime-init/develop/develop/dist/f5-bigip-runtime-init-1.1.0-1.gz.run'
+PACKAGE_URL='https://cdn.f5.com/product/cloudsolutions/f5-bigip-runtime-init/v1.1.0/dist/f5-bigip-runtime-init-1.1.0-1.gz.run'
 RUNTIME_CONFIG='https://raw.githubusercontent.com/f5-applebaum/deployments-v2/0.0.1/dev/bigip-configurations/bigip-config.yaml'
 
 # Download or render f5-bigip-runtime-init config
